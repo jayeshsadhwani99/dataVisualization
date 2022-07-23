@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "yarn rollup src/index.js --file src/bundle.js --format iife --watch",
+    "build": "yarn rollup src/index.js --file src/bundle.js --format iife"
+  },
   "author": "Jayesh",
   "license": "ISC",
   "devDependencies": {
