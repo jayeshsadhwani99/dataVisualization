@@ -128,3 +128,60 @@ The other thing that we look for after data is what task we want to perform with
 - What outcomes are you hoping for?
 - What story do you want to tell?
 - What tasks should the viewer be able to perform?
+
+## Marks and Channels
+
+Take a look [here](https://youtu.be/2LhoCfjm8R4?t=13833) for reference.
+
+It helps us map the attributes based on what their type is to the graphics on the screen and provides a systematic way of looking at the decision space.
+
+### Marks
+
+Marks include:
+
+- Points
+- Lines
+- Area
+
+A lot of visualizations can be boiled down to these marks.
+
+### Channels
+
+Channels are modifiers on the marks. Types of channels:
+
+- Precision:
+
+  Like the points x and y
+
+  > Precision is the most powerful channel. Because, the first thing we percieve is the position
+
+- Color:
+
+  It is kinda subtle. There are 3 dimensions of color:
+
+  1. Hue
+  2. Saturation
+  3. Luminance
+
+- Size
+- Shape
+
+> All of these have different places to be applied, depending on the attribute types.
+
+**Some Important Points**
+
+- We can use opacity to determine the density.
+- We use hue with categorical data
+- The way that people percieve size is by the area and not the radius of the circle. And, radius is proportional to the square root of the area. So, we need to keep that in account when using size as a channel.
+
+  Thus, from an implementation perspective we wouldn't want to represent data in a linear scale with size.
+
+- If we map hue to an ordered data, it wouldn't make sense, as we cannot assign an order to hue, for example, we cannot say that blue is grater than yellow or vice-versa
+
+- To map ordered data, luminance would be a better indicator than hue, as luminance has a natural order.
+
+- Using area while representing a relative data like temperature is not a good idea.
+
+- We can use areas to represent multiple different things and we can distinguish them using hue.
+
+[Here](https://youtu.be/2LhoCfjm8R4?t=15915) is the rankings for different channels and marks
